@@ -1,4 +1,4 @@
-#  LandmarkNER 
+#  LandmarkNER - Identify Bavarian Landmarks in Text
 
 ![LandmarkNER Logo](LandmarkNER_Logo_freigestellt.png)
 
