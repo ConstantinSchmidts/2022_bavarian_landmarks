@@ -19,14 +19,14 @@ This repo contains code to identify landmarks in subtitles from videos of Bayeri
 ## Data 
 
 * [pattern](data\patterns.jsonl) dictionary of landmark names
-* [spacy train data](binary_training_files\train.spacy)
-* [spacy dev data](binary_training_files\dev.spacy)
-* [spacy test data](binary_training_files\train.spacy)
-* [base config](configs\base_config_trf_spacy32.cfg) for training of transformer ner
+* [train data](spaCy_training_files\train.spacy)
+* [validation data](spaCy_training_files\dev.spacy)
+* [test data](spaCy_training_files\test.spacy)
+* [base config](config\base_config_trf_spacy32.cfg) for training of transformer ner
 
 ## Usage
 
-You can adapt the scripts to a custom NER label of your choice. Start by [creating a corpus](scripts\create_corpus.py) from .txt files. Then, [create a pattern.jsonl file](scripts\create_patterns.py) from a collection of example labels. From this, you [create training data](scripts\create_initial_train_data.py) for an initial model. You train this initial model by using the [spaCy command line interface](https://spacy.io/usage/training). Next, you correct the initial model's predictions on the corpus with the [custom prodigy annotation recipce](recipes\ner_correct_spans.py) to generate high-quality NER training data. Split into [training data](binary_training_files\train.spacy) and [validation data](binary_training_files\dev.spacy). With these data, you can fine-tune the German BERT model. For this project, the LandmarkNER model was [fine-tuned in a notebook](notebooks\NER_spaCy_de_trf_3_3.ipynb) in [GoogleColab](https://colab.research.google.com), using the [base config](configs\base_config_trf_spacy32.cfg). Finally, [create a test data corpus](scripts\create_corpus.py) from fresh subtitles and fully annotate them with the standard prodigy recipe [ner.manual](https://prodi.gy/docs/recipes#ner-manual). [Evaluate](https://spacy.io/api/cli#evaluate) your model on the test set.
+You can adapt the scripts to a custom NER label of your choice. Start by [creating a corpus](scripts\create_corpus.py) from .txt files. Then, [create a pattern.jsonl file](scripts\create_patterns.py) from a collection of example labels. From this, you [create training data](scripts\create_initial_train_data.py) for an initial model. You train this initial model by using the [spaCy command line interface](https://spacy.io/usage/training). Next, you correct the initial model's predictions on the corpus with the [custom prodigy annotation recipce](recipes\ner_correct_spans.py) to generate high-quality NER training data. Split into [training data](spaCy_training_files\train.spacy) and [validation data](spaCy_training_files\dev.spacy). With these data, you can fine-tune the German BERT model. For this project, the LandmarkNER model was [fine-tuned in a notebook](notebooks\NER_spaCy_de_trf_3_3.ipynb) in [GoogleColab](https://colab.research.google.com), using the [base config](config\base_config_trf_spacy32.cfg). Finally, [create a test data corpus](scripts\create_corpus.py) from fresh subtitles and fully annotate them with the standard prodigy recipe [ner.manual](https://prodi.gy/docs/recipes#ner-manual). [Evaluate](https://spacy.io/api/cli#evaluate) your model on the test set.
 
 ## Model 
 

@@ -6,10 +6,10 @@ import re
 
 from torch import chunk
 
-#Build upon the spaCy large German Model
+# Build upon the spaCy large German Model
 nlp = spacy.load("de_core_news_lg")
 
-#Create a blank list for appending later.
+# Create a blank list for appending later.
 corpus = []
 
 # ftfy can fix mojibake (encoding mix-ups), 
