@@ -1,0 +1,5 @@
+*.txt
+*.doc
+*.stl
+*.csv
+.lm_ner_env/
