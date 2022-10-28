@@ -1,3 +1,7 @@
+
+    """
+    `ner_correct_spans` is an adaption of the ner_correct recipe that only shows the examples where the models predicts something to the annotator. This is useful if you have a lot of examples where the model does not predict anything and you want to focus on the examples where the model makes mistakes.
+    """
 import copy
 from typing import List, Optional
 import spacy
