@@ -18,11 +18,11 @@ This repo contains code to identify landmarks in subtitles from videos of Bayeri
 
 ## Data 
 
-* [pattern](data/patterns.jsonl) dictionary of landmark names
-* [train data](spaCy_training_files/train.spacy)
-* [validation data](spaCy_training_files/dev.spacy)
-* [test data](spaCy_training_files/test.spacy)
-* [base config](config/base_config_trf_spacy32.cfg) for training of transformer ner
+* [Pattern](data/patterns.jsonl) dictionary of landmark names
+* [Train data](spaCy_training_files/train.spacy)
+* [Validation data](spaCy_training_files/dev.spacy)
+* [Test data](spaCy_training_files/test.spacy)
+* [Base config](config/base_config_trf_spacy32.cfg) for training of transformer ner
 
 ## Usage
 
@@ -30,13 +30,13 @@ You can adapt the scripts to a custom NER label of your choice. Start by [creati
 
 ## Model 
 
-The trained LandmarkNER model is available on the [Hugging Face hub](https://huggingface.co/constantinSch/LandmarkNER)
+The trained LandmarkNER model is available on the [Hugging Face hub](https://huggingface.co/constantinSch/LandmarkNER).
 
 To disambiguate detected entities to Wikipedia titles [mGenre](https://github.com/facebookresearch/GENRE) can be used. The resulting pipeline can be tested in an [interactive Web App on Hugging Face Spaces.](https://huggingface.co/spaces/constantinSch/LandmarkNER_EL)
 
 ## PoC for multimodal video unterstanding
 
-Furthermore, this model is used in a proof of concept for the extraction of the landmark names and frames of landmarks from a video, using time-code-associated descriptive texts or subtitles. [OWL-ViT (an open-vocabulary object detection model)](https://arxiv.org/pdf/2205.06230) is used as a building detector. The text is analyzed with the LandmarkNER model, its output is disambiguated for Wikipedia titles by mGenre](https://github.com/facebookresearch/GENRE). For timecodes at which a building is detected in the video by [OWL-ViT](https://arxiv.org/pdf/2205.06230) and the name of a landmark is detected in the text, the frames and the associated landmark names are extracted. The [proof of concept notebook](notebooks/OWL_ViT+LandmarkNER+mGenre.ipynb) can be executed in Colab.
+Furthermore, this model is used in a proof of concept for the extraction of the landmark names and frames of landmarks from a video, using time-code-associated descriptive texts or subtitles. [OWL-ViT (an open-vocabulary object detection model)](https://arxiv.org/pdf/2205.06230) is used as a building detector. The text is analyzed with the LandmarkNER model, its output is disambiguated for Wikipedia titles by [mGenre](https://github.com/facebookresearch/GENRE). For timecodes at which a building is detected in the video by [OWL-ViT](https://arxiv.org/pdf/2205.06230) and the name of a landmark is detected in the text, the frames and the associated landmark names are extracted. The [proof of concept notebook](notebooks/OWL_ViT+LandmarkNER+mGenre.ipynb) can be executed in Colab.
 ## License
 
 [MIT License](LICENSE.md)
