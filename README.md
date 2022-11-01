@@ -2,7 +2,7 @@
 
 ![LandmarkNER Logo](LandmarkNER_Logo_freigestellt.png)
 
-This repo contains code to identify landmarks in subtitles from videos of Bayerischer Rundfunk (BR). To this end a custom Named Entity Recognition (NER) model was trained in [spaCy](https://spacy.io/). The model uses the [pretrained German transformer pipeline (bert-base-german-cased)](https://spacy.io/models/de#de_dep_news_trf) included in spaCy. An NER pipeline for [de_dep_news_trf](https://spacy.io/models/de#de_dep_news_trf) was created and fine-tuned on a corpus of annotated subtitles (annotated using [prodigy](https://prodi.gy/)). Due to legal restrictions the initial subtitle files are not included in this repo. 
+This repo contains code to identify landmarks in subtitles from videos of Bayerischer Rundfunk (BR). To this end a custom Named Entity Recognition (NER) model was trained in [spaCy](https://spacy.io/). The model uses the [pretrained German transformer pipeline (bert-base-german-cased)](https://spacy.io/models/de#de_dep_news_trf) included in spaCy. An NER pipeline for [de_dep_news_trf](https://spacy.io/models/de#de_dep_news_trf) was created and fine-tuned on a corpus of annotated subtitles (annotated using [prodigy](https://prodi.gy/)). The initial subtitle files are not included in this repo. 
 
 ## Scripts 
 
