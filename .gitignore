@@ -2,3 +2,4 @@
 *.stl
 *.csv
 .lm_ner_env/
+spaCy_training_files/
